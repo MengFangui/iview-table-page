@@ -1,7 +1,7 @@
 {
   "name": "iview-table-page",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -47,5 +47,23 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "description": "Combines Table and Pagination components of iview UI together. Based on Vue 2.x.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MengFangui/iview-table-page.git"
+  },
+  "keywords": [
+    "iview",
+    "table",
+    "page",
+    "ui",
+    "vue"
+  ],
+  "author": "mengfangui <meng010387@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MengFangui/iview-table-page/issues"
+  },
+  "homepage": "https://github.com/MengFangui/iview-table-page#readme"
 }
