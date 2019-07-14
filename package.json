@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "iview": "^3.0.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -19,6 +20,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "vue-cli-plugin-iview": "^1.0.6",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
