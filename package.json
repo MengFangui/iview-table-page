@@ -5,8 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name iviewTablePage ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/iviewTablePage.umd.js",
   "dependencies": {
     "core-js": "^2.6.5",
     "iview": "^3.0.1",
