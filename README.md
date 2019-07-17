@@ -9,9 +9,12 @@ yarn add iview-table-page
 ## API
 [API](./doc/api.md)
 ## Demos
-[服务端分页以及自定义序号](./example/table1.vue)
-[服务端分页并排序、过滤](./example/table2.vue)
-[可编辑单元格](./example/table3.vue)
+[服务端分页以及自定义序号](./example/table1.vue) 
+
+[服务端分页并排序、过滤](./example/table2.vue) 
+
+[可编辑单元格](./example/table3.vue) 
+
 [可编辑行](./example/table4.vue)
 
 ## Quick Start
