@@ -26,7 +26,7 @@ row-key | 是否强制使用内置的 row-key，开启后可能会影响性能 |
 事件名 | 说明 | 返回值
 ---|---|--- 
 on-current-change | 开启 highlight-row 后有效，当表格的当前行发生变化的时候会触发 | currentRow：当前高亮行的数据,oldCurrentRow：上一次高亮的数据
-on-select | 在多选模式下有效，选中某一项时触发 | selection：已选项数据,row：刚选择的项数据,即==接收的参数是（selection，row）==
+on-select | 在多选模式下有效，选中某一项时触发 | selection：已选项数据,row：刚选择的项数据,即接收的参数是（selection，row）
 on-select-cancel | 在多选模式下有效，取消选中某一项时触发 | selection：已选项数据，row：取消选择的项数据
 on-select-all | 在多选模式下有效，点击全选时触发 | selection：已选项数据
 on-select-all-cancel | 在多选模式下有效，点击取消全选时触发 | selection：已选项数据
@@ -41,17 +41,17 @@ on-drag-drop | 拖拽排序松开时触发，返回置换的两行数据索引 |
 ## page 属性
 属性|	说明	|类型|	默认值
 ---|---|--- |---
-==current==	|当前页码，支持 .sync 修饰符|	Number	|1
+current	|当前页码，支持 .sync 修饰符|	Number	|1
 total|	数据总数|	Number|	0
 page-size|	每页条数|	Number|	10
 page-size-opts|	每页条数切换的配置|	Array|	[10, 20, 30, 40]
 placement|	条数切换弹窗的展开方向，可选值为 bottom 和 top	|String	|bottom
-==page-shape-size==|	可选值为small（迷你版）或不填（默认）|	String	|-
+page-shape-size|	可选值为small（迷你版）或不填（默认）|	String	|-
 simple|	简洁版|	Boolean|	false
 show-total|	显示总数	|Boolean|false
 show-elevator|	显示电梯，可以快速切换到某一页|	Boolean	|false
 show-sizer|	显示分页，用来改变page-size	|Boolean|	false
-==page-class-name==|	自定义| class 名称	|String|	-
+page-class-name|	自定义| class 名称	|String|	-
 styles|	自定义 style 样式	|Object|	-
 transfer|	是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果|	Boolean	|false
 prev-text|	替代图标显示的上一页文字|	String|	-
@@ -60,5 +60,5 @@ next-text|	替代图标显示的下一页文字|	String|-
 ## 新增属性
 属性|	说明	|类型|	默认值
 ---|---|--- |---
-==pagination-show==	|是否显示页面|	Boolean	| true
-==pagination-position== | 页码位置 | String 可选值为 left、center 和 right| right
+pagination-show	|是否显示页面|	Boolean	| true
+pagination-position | 页码位置 | String 可选值为 left、center 和 right| right
