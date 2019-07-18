@@ -1,10 +1,21 @@
 # iview-table-page
 
+![npm](https://img.shields.io/npm/v/iview-table-page.svg)
+![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/iview-table-page.svg)
+![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/iview-table-page.svg)
+![npm](https://img.shields.io/npm/dw/iview-table-page.svg?style=popout)
+![npm](https://img.shields.io/npm/dm/iview-table-page.svg?style=popout)
+![npm](https://img.shields.io/npm/l/iview-table-page.svg)
+
+[![NPM](https://nodei.co/npm/iview-table-page.png)](https://nodei.co/npm/iview-table-page/)
+
+> Combines Table and Page components of [iview UI](https://www.iviewui.com/) together. Based on Vue 2.x.
+
 ## Install
 ```
 $ npm i --save iview-table-page
 or
-yarn add iview-table-page
+$ yarn add iview-table-page
 ```
 ## API
 [API](./doc/api.md)
