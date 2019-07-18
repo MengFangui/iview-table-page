@@ -1,6 +1,5 @@
 .DS_Stor.gitignoree
 node_modules
-/dist
 
 # local env files
 .env.local

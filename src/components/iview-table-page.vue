@@ -325,6 +325,19 @@ export default {
     exportCsv (...arg) {
       this.$children[0].exportCsv(...arg)
     }
+  },
+  mounted () {
+    let that = this
+    // 获取跳转页码
+    let dom = document.querySelector('.ivu-page-options-elevator input')
+    if (dom) {
+      dom.onchange = function () {
+        let pageNo = parseInt(dom.value, 10)
+        if (!Number.isNaN(pageNo) && pageNo > 0 && pageNo <= that.total) {
+          that.current = pageNo
+        }
+      }
+    }
   }
 }
 </script>
