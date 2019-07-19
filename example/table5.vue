@@ -1,5 +1,6 @@
 <template>
 <div>
+    <h1>快速切换到某一页</h1>
   <iviewTablePage
   border
   :columns="columns7"
