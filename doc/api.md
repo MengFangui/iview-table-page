@@ -41,7 +41,7 @@ on-drag-drop | 拖拽排序松开时触发，返回置换的两行数据索引 |
 ## page 属性
 属性|	说明	|类型|	默认值
 ---|---|--- |---
-current	|当前页码，支持 .sync 修饰符|	Number	|1
+currentPage	|当前页码|	Number	|1
 total|	数据总数|	Number|	0
 page-size|	每页条数|	Number|	10
 page-size-opts|	每页条数切换的配置|	Array|	[10, 20, 30, 40]

@@ -1,48 +1,3 @@
-# iview-table-page
-
-![npm](https://img.shields.io/npm/v/iview-table-page.svg)
-![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/iview-table-page.svg)
-![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/iview-table-page.svg)
-![npm](https://img.shields.io/npm/dw/iview-table-page.svg?style=popout)
-![npm](https://img.shields.io/npm/dm/iview-table-page.svg?style=popout)
-![npm](https://img.shields.io/npm/l/iview-table-page.svg)
-
-[![NPM](https://nodei.co/npm/iview-table-page.png)](https://nodei.co/npm/iview-table-page/)
-
-> Combines Table and Page components of [iview UI](https://www.iviewui.com/) together. Based on Vue 2.x.
-
-## Install
-```
-$ npm i --save iview-table-page
-or
-$ yarn add iview-table-page
-```
-## API
-[API](./doc/api.md)
-## Demos
-[服务端分页以及自定义序号](./example/table1.vue) 
-
-[服务端分页并排序、过滤](./example/table2.vue) 
-
-[可编辑单元格](./example/table3.vue) 
-
-[可编辑行](./example/table4.vue)
-
-[快速切换到某一页](./example/table5.vue)
-> 由于iview page组件show-elevator属性可以显示跳转页面，但是在跳转页面的输入框输入页面后，页面没有跳转。iview-table-page组件解决了这个问题。
-
-
-## Quick Start
-### 全局注册组件
-Import modules and set up settings in `main.js`:
-
-```js
-import Vue from 'vue'
-import iviewTablePage from 'iview-table-page'
-Vue.use(iviewTablePage)
-```
-### 局部注册组件
-```js
 <template>
 <div>
   <iviewTablePage
@@ -50,6 +5,7 @@ Vue.use(iviewTablePage)
   :columns="columns7"
   :data="data6"
   :total='total'
+  show-elevator
   >
   </iviewTablePage>
 </div>
@@ -61,6 +17,7 @@ export default {
   components: { iviewTablePage },
   data () {
     return {
+      total: 200,
       columns7: [
         {
           title: 'Name',
@@ -149,13 +106,8 @@ export default {
           age: 26,
           address: 'Ottawa No. 2 Lake Park'
         }
-      ],
-      total: 4
+      ]
     }
   }
 }
 </script>
-
-```
-## LICENSE
-MIT

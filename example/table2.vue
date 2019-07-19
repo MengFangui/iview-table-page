@@ -1,4 +1,6 @@
 <template>
+<div>
+    <h1>服务端分页并排序、过滤</h1>
     <iviewTablePage
     :columns="columns"
     :data="data"
@@ -13,6 +15,7 @@
     @on-filter-change="handleFilterChange"
     >
     </iviewTablePage>
+</div>
 </template>
 <script>
 import iviewTablePage from 'iview-table-page'
@@ -90,7 +93,7 @@ export default {
       current: 1,
       pageSize: 10,
       sortType: 'normal', // normal || asc || desc
-      filterType: undefined// undefined, 1, 2
+      filterType: undefined // undefined, 1, 2
     }
   },
   methods: {

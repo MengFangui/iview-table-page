@@ -378,12 +378,12 @@ var store = global[SHARED] || (global[SHARED] = {});
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"04b2302a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/iview-table-page.vue?vue&type=template&id=db9543c6&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"04b2302a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/iview-table-page.vue?vue&type=template&id=42ece853&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('Table',{attrs:{"columns":_vm.columns,"data":_vm.data,"stripe":_vm.stripe,"border":_vm.border,"show-header":_vm.showHeader,"width":_vm.width,"height":_vm.height,"max-height":_vm.maxHeight,"loading":_vm.loading,"disabled-hover":_vm.disabledHover,"row-class-name":_vm.rowClassName,"size":_vm.size,"no-data-tex":_vm.noDataText,"no-filtered-data-text":_vm.noFilteredDataText,"draggable":_vm.draggable,"tooltip-theme":_vm.tooltipTheme,"row-key":_vm.rowKey,"highlight-row":_vm.highlightRow},on:{"on-current-change":_vm.onCurrentChange,"on-select":_vm.onSelect,"on-select-cancel":_vm.onSelectCancel,"on-select-all":_vm.onSelectAll,"on-select-all-cancel":_vm.onSelectAllCancel,"on-selection-change":_vm.onSelectionChange,"on-sort-change":_vm.onSortChange,"on-filter-change":_vm.onFilterChange,"on-row-click":_vm.onRowClick,"on-row-dblclick":_vm.onRowDblclick,"on-expand":_vm.onExpand,"on-drag-drop":_vm.onDragDrop}},[_c('template',{slot:"header"},[_vm._t("header")],2),_c('template',{slot:"footer"},[_vm._t("footer")],2),_c('template',{slot:"loading"},[_vm._t("loading")],2)],2),(_vm.paginationShow)?_c('div',{style:(_vm.pageStyle)},[_c('Page',{attrs:{"total":_vm.total,"current":_vm.current,"page-size":_vm.pageSize,"page-size-opts":_vm.pageSizeOpts,"placement":_vm.placement,"size":_vm.pageShapeSize,"simple":_vm.simple,"show-total":_vm.showTotal,"show-elevator":_vm.showElevator,"show-sizer":_vm.showSizer,"class-name":_vm.pageClassName,"styles":_vm.styles,"transfer":_vm.transfer,"prev-text":_vm.prevText,"next-text":_vm.nextText},on:{"on-change":_vm.onChange,"on-page-size-change":_vm.onPageSizeChange}},[_vm._t("default")],2)],1):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/iview-table-page.vue?vue&type=template&id=db9543c6&
+// CONCATENATED MODULE: ./src/components/iview-table-page.vue?vue&type=template&id=42ece853&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.is-nan.js
 var es6_number_is_nan = __webpack_require__("ee1d");
@@ -554,7 +554,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
       default: false
     },
     // 当前页码，支持 .sync 修饰符
-    current: {
+    currentPage: {
       type: Number,
       default: 1
     },
@@ -646,7 +646,8 @@ var es6_number_constructor = __webpack_require__("c5f6");
       pageStyle: {
         'text-align': this.paginationPosition,
         margin: '16px 0'
-      }
+      },
+      current: 1
     };
   },
   methods: {
@@ -782,11 +783,14 @@ var es6_number_constructor = __webpack_require__("c5f6");
     }
   },
   mounted: function mounted() {
+    // 初始化页码
+    this.current = this.currentPage;
     var that = this; // 获取跳转页码
 
     var dom = document.querySelector('.ivu-page-options-elevator input');
 
     if (dom) {
+      // 定义事件oninput
       dom.onchange = function () {
         var pageNo = parseInt(dom.value, 10);
 

@@ -159,7 +159,7 @@ export default {
       default: false
     },
     // 当前页码，支持 .sync 修饰符
-    current: {
+    currentPage: {
       type: Number,
       default: 1
     },
@@ -251,7 +251,8 @@ export default {
       pageStyle: {
         'text-align': this.paginationPosition,
         margin: '16px 0'
-      }
+      },
+      current: 1
     }
   },
   methods: {
@@ -327,10 +328,13 @@ export default {
     }
   },
   mounted () {
+    // 初始化页码
+    this.current = this.currentPage
     let that = this
     // 获取跳转页码
     let dom = document.querySelector('.ivu-page-options-elevator input')
     if (dom) {
+      // 定义事件onchange
       dom.onchange = function () {
         let pageNo = parseInt(dom.value, 10)
         if (!Number.isNaN(pageNo) && pageNo > 0 && pageNo <= that.total) {

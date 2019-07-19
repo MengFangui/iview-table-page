@@ -1,4 +1,6 @@
 <template>
+<div>
+    <h1>服务端分页以及自定义序号</h1>
     <iviewTablePage
     :columns="columns12"
     :data="data6"
@@ -10,6 +12,7 @@
     @on-change='handleChangeSize'
     @on-page-size-change='handlePageChangeSize'>
     </iviewTablePage>
+</div>
 </template>
 <script>
 import iviewTablePage from 'iview-table-page'
@@ -25,7 +28,9 @@ export default {
           align: 'center',
           indexMethod: row => {
             // 序号逻辑
-            return row._index + 1 + this.pageSize * this.current - this.pageSize
+            return (
+              row._index + 1 + this.pageSize * this.current - this.pageSize
+            )
           }
         },
         {
